@@ -73,10 +73,10 @@ export const AllCountires = () => {
                 <img src={country.flags.png} alt="" />
               </div>
               <div className="country__data">
-                <h3>{country.name.common}</h3>
-                <h6>Populaion :{country.population}</h6>
-                <h6>Region : {country.region}</h6>
-                <h6>Capital City: {country.capital}</h6>
+                <h5>{country.name.common}</h5>
+                <h5>Populaion :{country.population}</h5>
+                <h5>Region : {country.region}</h5>
+                <h5>Capital City: {country.capital}</h5>
               </div>
             </div>
           </Link>
