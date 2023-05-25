@@ -30,7 +30,7 @@ export const CountryInfo = () => {
     
   return (
     <div className="country__info__wrapper">
-         <button><Link to= '/'>Back</Link></button>
+         <button><Link to= '/'> Back</Link></button>
          <div className="country__info__container">
          {country?.map((country, index) => (
         <div className="country__info__container" key={index}>

@@ -1,29 +1,45 @@
-import React from 'react'
+import React from 'react';
 
-export const FilterCountry = ({onSelect}) => {
+export const FilterCountry = ({ onSelect }) => {
+  const selectHandler = (e) => {
+    const regionName = e.target.value;
+    onSelect(regionName);
+  };
 
-    const selectHandler = (e) => {
-        const regionName = e.target.value;
-        onSelect(regionName);
-      };
+  const selectStyle = {
+    backgroundColor: 'white',
+    border: '1px solid black',
+    borderRadius: '4px',
+    padding: '8px',
+    color: 'black',
+    fontSize: '16px',
+  };
+
+  const optionStyle = {
+    backgroundColor: 'white',
+    color: 'black',
+  };
+
   return (
-    <select onChange={selectHandler}>
-      <option className="option">Filter by Region</option>
-      <option className="option" value="Africa">
+    <select onChange={selectHandler} style={selectStyle}>
+      <option className="option" style={optionStyle}>
+        Filter by Region
+      </option>
+      <option className="option" style={optionStyle} value="Africa">
         Africa
       </option>
-      <option className="option" value="America">
+      <option className="option" style={optionStyle} value="America">
         America
       </option>
-      <option className="option" value="Asia">
+      <option className="option" style={optionStyle} value="Asia">
         Asia
       </option>
-      <option className="option" value="Europe">
+      <option className="option" style={optionStyle} value="Europe">
         Europe
       </option>
-      <option className="option" value="Oceania">
+      <option className="option" style={optionStyle} value="Oceania">
         Oceania
       </option>
     </select>
-  )
-}
+  );
+};
